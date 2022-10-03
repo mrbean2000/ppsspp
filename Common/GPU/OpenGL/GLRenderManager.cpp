@@ -191,7 +191,7 @@ void GLRenderManager::ThreadEnd() {
 }
 
 // Unlike in Vulkan, this isn't a full independent function, instead it gets called every frame.
-// This also mean that we can poll the renderThreadQueue using a regular mutex, instead of
+// This also mean that we have to poll the renderThreadQueue using a regular mutex, instead of
 // blocking on it using a condition variable.
 bool GLRenderManager::ThreadFrame() {
 	if (!run_)

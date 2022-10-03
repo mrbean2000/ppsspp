@@ -401,6 +401,11 @@ public:
 	void Finish();
 	void Run(GLRRenderThreadTask &task);
 
+	void WaitUntilQueueIdle() {
+		// Don't think this needs to do anything anymore, at least not if called
+		// from render thread.
+	}
+
 	// Creation commands. These were not needed in Vulkan since there we can do that on the main thread.
 	// We pass in width/height here even though it's not strictly needed until we support glTextureStorage
 	// and then we'll also need formats and stuff.
