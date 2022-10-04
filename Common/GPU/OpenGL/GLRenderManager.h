@@ -385,7 +385,7 @@ public:
 
 	void ThreadStart(Draw::DrawContext *draw);
 	void ThreadEnd();
-	bool ThreadFrame();  // Returns false to request exiting the loop.
+	bool ThreadFrame();  // Returns true if it did anything. False means the queue was empty.
 
 	void SetErrorCallback(ErrorCallbackFn callback, void *userdata) {
 		queueRunner_.SetErrorCallback(callback, userdata);

@@ -24,6 +24,7 @@ public:
 		renderManager_->ThreadStart(draw_);
 	}
 
+	// Returns true if it did anything.
 	bool ThreadFrame() override {
 		return renderManager_->ThreadFrame();
 	}
